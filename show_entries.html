@@ -1,0 +1,31 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+Created on Fri May 12 13:05:25 2017
+
+@author: caowenhong
+"""
+
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <dt>Address:
+        <dd><input type=text size=30 name=address>
+        <dt>Zip Code:
+        <dd><input type=text name=zipcode>
+        <dd><input type=submit value=Search>
+      </dl>
+    </form>
+  {% endif %}
+  <ul class=entries>
+  {% for entry in entries %}
+    <li><h2>{{ entry.address }}</h2>
+    {{ entry.zipcode|safe }}
+    <p>{{ entry.home_description }}</p>
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
