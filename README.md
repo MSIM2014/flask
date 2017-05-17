@@ -1,5 +1,5 @@
 # flask
-I am following the Flask tutorial to write a variety of web applications in Python using the Flask framework. The url of the flask tutorial is http://flask.pocoo.org/docs/0.12/tutorial/. 
+I followed the Flask tutorial and wrote a variety of web applications in Python using the Flask framework. The url of the flask tutorial is http://flask.pocoo.org/docs/0.12/tutorial/. 
 
 This web application is named Flaskar. It does the following things:
 1. Let user sign in and sign out with credentials specified in the configuration. Only one user is supported.
